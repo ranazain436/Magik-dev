@@ -159,6 +159,37 @@
         app:popExitAnim="@anim/fragment_exit_pop"
         app:popUpTo="@id/homeFragment" />
 
+    <fragment
+        android:id="@+id/moduleRepoFragment"
+        android:name="com.topjohnwu.magisk.ui.module.ModuleRepoFragment"
+        android:label="ModuleRepoFragment"
+        tools:layout="@layout/fragment_module_repo">
+
+        <action
+            android:id="@+id/action_moduleRepoFragment_to_repoSettingsFragment"
+            app:destination="@id/repoSettingsFragment"
+            app:enterAnim="@anim/fragment_enter"
+            app:exitAnim="@anim/fragment_exit"
+            app:popEnterAnim="@anim/fragment_enter_pop"
+            app:popExitAnim="@anim/fragment_exit_pop" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/repoSettingsFragment"
+        android:name="com.topjohnwu.magisk.ui.module.RepoSettingsFragment"
+        android:label="RepoSettingsFragment"
+        tools:layout="@layout/fragment_settings_repo" />
+
+    <action
+        android:id="@+id/action_moduleRepoFragment"
+        app:destination="@id/moduleRepoFragment"
+        app:enterAnim="@anim/fragment_enter"
+        app:exitAnim="@anim/fragment_exit"
+        app:popEnterAnim="@anim/fragment_enter_pop"
+        app:popExitAnim="@anim/fragment_exit_pop"
+        app:popUpTo="@id/homeFragment" />
+
     <action
         android:id="@+id/action_flashFragment"
         app:destination="@id/flashFragment"

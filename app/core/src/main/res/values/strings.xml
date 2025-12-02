@@ -9,6 +9,7 @@
     <string name="section_home">Home</string>
     <string name="section_theme">Themes</string>
     <string name="denylist">DenyList</string>
+    <string name="module_repo">Module Repo</string>
 
     <!--Home-->
     <string name="no_connection">No connection available</string>
@@ -245,5 +246,11 @@
     <string name="app_not_found">No app found to handle this action</string>
     <string name="reboot_apply_change">Reboot to apply changes</string>
     <string name="restore_app_confirmation">This will restore the hidden app back to the original app. Do you really want to do this?</string>
+
+    <!-- Module Repo -->
+    <string name="repo_settings_title">Repository Settings</string>
+    <string name="repo_url_hint">Repository URL</string>
+    <string name="save">Save</string>
+    <string name="failed_to_load_modules">Failed to load modules</string>
 
 </resources>

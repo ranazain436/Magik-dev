@@ -9,6 +9,10 @@ abstract class Module : Comparable<Module> {
         protected set
     abstract var versionCode: Int
         protected set
+    open var author: String = ""
+        protected set
+    open var description: String = ""
+        protected set
 
     override operator fun compareTo(other: Module) = id.compareTo(other.id)
 }

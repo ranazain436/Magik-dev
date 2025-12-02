@@ -44,6 +44,7 @@ object Config : PreferenceConfig, DBConfig {
         const val ASKED_HOME = "asked_home"
         const val DOH = "doh"
         const val RAND_NAME = "rand_name"
+        const val MODULE_REPO_URL = "module_repo_url"
 
         val NO_MIGRATION = setOf(ASKED_HOME, SU_REQUEST_TIMEOUT,
             SU_AUTO_RESPONSE, SU_REAUTH, SU_TAPJACK)
@@ -113,6 +114,7 @@ object Config : PreferenceConfig, DBConfig {
     var doh by preference(Key.DOH, false)
     var updateChannel by preference(Key.RELEASE_CHANNEL, Value.DEFAULT_CHANNEL)
     var customChannelUrl by preference(Key.CUSTOM_CHANNEL, "")
+    var moduleRepoUrl by preference(Key.MODULE_REPO_URL, "https://api.github.com/orgs/Magisk-Modules-Repo/repos")
     var downloadDir by preference(Key.DOWNLOAD_DIR, "")
     var randName by preference(Key.RAND_NAME, true)
     var checkUpdate

@@ -26,4 +26,10 @@
         android:title="@string/modules"
         tools:showAsAction="always" />
 
+    <item
+        android:id="@+id/moduleRepoFragment"
+        android:icon="@drawable/ic_module_md2"
+        android:title="@string/module_repo"
+        tools:showAsAction="always" />
+
 </menu>

@@ -96,6 +96,7 @@ class MainActivity : NavigationActivity<ActivityMainMd2Binding>(), SplashScreenH
             isRootFragment = when (destination.id) {
                 R.id.homeFragment,
                 R.id.modulesFragment,
+                R.id.moduleRepoFragment,
                 R.id.superuserFragment,
                 R.id.logFragment -> true
                 else -> false
@@ -182,6 +183,7 @@ class MainActivity : NavigationActivity<ActivityMainMd2Binding>(), SplashScreenH
         return when (id) {
             R.id.homeFragment -> MainDirections.actionHomeFragment()
             R.id.modulesFragment -> MainDirections.actionModuleFragment()
+            R.id.moduleRepoFragment -> MainDirections.actionModuleRepoFragment()
             R.id.superuserFragment -> MainDirections.actionSuperuserFragment()
             R.id.logFragment -> MainDirections.actionLogFragment()
             else -> null
