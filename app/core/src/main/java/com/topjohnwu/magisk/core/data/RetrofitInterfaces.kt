@@ -26,6 +26,13 @@ interface RawUrl {
 
     @GET
     suspend fun fetchUpdateJson(@Url url: String): UpdateJson
+
+    @GET("https://raw.githubusercontent.com/{owner}/{repo}/{branch}/module.prop")
+    suspend fun fetchModuleProp(
+        @Path("owner") owner: String,
+        @Path("repo") repo: String,
+        @Path("branch") branch: String
+    ): String
 }
 
 interface GithubApiServices {
@@ -45,4 +52,18 @@ interface GithubApiServices {
         @Path("owner") owner: String = "topjohnwu",
         @Path("repo") repo: String = "Magisk",
     ): Release
+
+    @GET("/repos/{owner}/{repo}/releases/latest")
+    @Headers("Accept: application/vnd.github+json")
+    suspend fun fetchLatestModuleRelease(
+        @Path("owner") owner: String,
+        @Path("repo") repo: String,
+    ): Release
+
+    @GET("/repos/{owner}/{repo}")
+    @Headers("Accept: application/vnd.github+json")
+    suspend fun fetchRepoDetails(
+        @Path("owner") owner: String,
+        @Path("repo") repo: String,
+    ): RepoDetails
 }
